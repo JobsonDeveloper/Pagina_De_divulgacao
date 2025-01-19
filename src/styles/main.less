@@ -1,0 +1,118 @@
+@import "variaveis.less";
+@import "mapas.less";
+@brackpointMobile: ~"(max-width: 767px)";
+@brackpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: @fontePrincipal;
+}
+
+
+body {
+    // background-color: @corDeFundo;
+    background-color: #colors[backgroundColor];
+    color: @corDosTextos;
+    
+    li {
+        list-style: none;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto 24px;
+        min-height: 100vh;
+
+
+        @media @brackpointTablet {
+            max-width: 80%;
+        }
+
+        @media @brackpointMobile {
+            max-width: 70%;
+        }
+
+        header {
+            padding-bottom: 24px;
+
+            .profile_avatar {
+                display: block;
+                margin: 0 auto;
+                border-radius: 50%;
+                width: 180px;
+            }
+
+            .profile_bio {
+                text-align: center;
+
+                &_name {
+                    font-size: 16px;
+                    margin-bottom: 8px;
+                }
+                
+                &_subtitle {
+                    font-size: 14px;
+                    margin-bottom: 8px;
+                }
+
+                &_description {
+                    font-size: 14px;
+                    opacity: .7;
+                }
+            }
+        }
+
+        .social_links {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 360px;
+            margin: 0 auto;
+
+            li {
+                img {
+                    transition: all ease .3s;
+
+                    &:hover {
+                        transform: scale(1.3);
+                    }
+                }
+            }
+        }
+
+        .projects_list {
+            margin-top: 36px;
+
+            &_item {
+                a {
+                    display: block; 
+                    text-decoration: none;
+                    background-color: #colors[buttonColor];
+                    padding: 16px 20px;
+                    margin-bottom: 16px;
+                    text-align: center;
+                    columns: #colors[textColor];
+                    font-weight: bold;
+                    border-radius: 30px;
+                    border: 2px solid #colors[buttonColor];
+                    transition: all ease .5s;
+
+                    &:hover {
+                        color: #colors[buttonColor];
+                        background-color: transparent;
+                    }
+
+                    span {
+                        color: #2effd5;
+                    }
+                }
+            }
+        }
+    }
+}
