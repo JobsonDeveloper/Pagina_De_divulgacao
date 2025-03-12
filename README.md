@@ -1,4 +1,3 @@
-### Lista de tarefas
 [Veja o site](https://pagina-de-divulgacao.vercel.app/)
 
 ### Ferramentas utiliizadas:
